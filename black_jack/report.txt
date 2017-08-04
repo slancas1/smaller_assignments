@@ -1,0 +1,59 @@
+Sophie Lancaster
+February 5, 2017
+
+From a user's perspective when the executable is entered the following sentence is 
+outputted to the user: "Your card was worth __ points. Your total score is __."
+After this the user is prompted by the following question: "Hit (h) or stand (s)?"
+After answering the question with an h or s two things happen depending on the user's
+answer. If the user enters an h then the sentence from before updates with the 
+value of the next card that was dealt to the user and with their updated total
+score. The user can continue to hit (or click h) until they have decided they 
+scored high enough or they have gone past 21. If the user goes past 21 the are 
+told that they busted and the computer wins. If instead the user doesn't exceed
+21 but instead decides to stand (or click s) because they are happy with their
+score the computer's score is outputted along with the winner of the game and 
+the total wins for both the computer and player. Finally after each game the 
+winner is given the following question: "Do you want to play another game? 
+Yes (y) or no (n):" If the player clicks y the whole thing starts over again and
+if they click n the program quits. There are some other scenarios that can be 
+displayed to the user if for example there is a tie or the computer busts. 
+
+From a programmer's perspective in order to make this black jack game I built off 
+of the CardDeck class that I made for part 1 of this lab. I kept the getSize and
+shuffle functions and then added a few more of my own. In order to build off of 
+this class I added the functions Deal, checkWinner, playBlackJack, and 
+continuePlaying, and I added the private data members cardIndex, playerScore, 
+computerScore, playerWins, and computerWins. In the implementation of the 
+blackJack class the constructor initializes all of the private data members, 
+allocates the memory for the deck array, and then initializes the deck to contain
+the cards. The destructor then uses the delete method to destroy the space for the
+array when the variable goes out of scope. The getSize function simply returns the
+private data member size. The shuffle function uses Knuth's algorithm to swap 
+two of the cards in the deck until the whole deck is shuffled. The Deal function
+checks to make sure there are still more than 15 cards in the deck and then 
+converts some of the values of the cards if necessary and then finally outputs
+the value of that spot in the deck array and increments the cardIndex variable. 
+The checkWinner function compares the playerScore and computerScore to determine
+if one of the players busted, won, or if there was a tie and outputs the outcome
+of the game. The playBlackJack function uses two while loops to first go through 
+the player's turn keeping track of their score and whether or not they want to 
+continuing getting cards until they decide they are done, and then goes into 
+another while loop for the computer's turn and deals the computer cards until 
+they have gotten a score of at least 17. Finally, the checkWinner function is
+called to determine if there was a winner. The final function is the 
+continuePlaying function which uses another while loop to continue asking the
+player if they want to play another game and continues to call the 
+playBlackJack function as long as the user says y to the play another game
+question. Another thing I did for the BlackJack class was overload the output 
+operator. Although this wasn't really utilized in the output for the black 
+jack game it was used to finish part 1 of the lab. The final part of the black
+jack game was to create a very simple main driver program which uses srand to 
+initialize the random number generator, instantiates a blackJack object, and 
+finally calls the continuePlaying function to run the game.
+
+In order to test that my program worked I played continually to make sure that
+all of the different scenarios worked. I also made sure to play until a new deck
+had to be created and shuffled in order to check that this part of my code worked. 
+I could not find an instance after all of the games that I played where my code
+went wrong.   
+
