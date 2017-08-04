@@ -9,7 +9,7 @@ In order to start learning about working with different graphics libraries we we
 1. Clone the repository
 2. Compile animate.cpp using the following command: `g++ -std=c++11 -lX11 animate.cpp -o animate` --> FIX THIS IT ISN'T RIGHT
 3. Run the executable: `./animate`
-4. A window will open and the user can control the animation using the following commands (as the window describes):
+4. A window will open and the user can control the animation using the following commands:
 	* w: speed up the ball
 	* s: slow down the ball
 	* a: move the ball to the left
