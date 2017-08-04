@@ -1,0 +1,35 @@
+ACTIVITY 3: ZIP CODES
+
+1. For this part of the lab four flags can be entered at the command line: -h, -c, -f, and -s. In
+order to take care of the -h flag I used an if statement that said if the first argument was
+equal to a -h output the usage message provided. In order to deal with the -c, -f, and -s
+flags I used a while loop that executes as long as the number of arguments is greater than
+one. Inside this while loop I used shift to loop through the command line arguments and then
+three if statements that execute if the arguments equal the flags. If the -c flag is found a
+variable called CITY is set to the string after the -c flag and the CITYSET flag is set to
+true. If the -f flag is set then another if / elif statement is entered depending on if the -f
+flag was followed by the word "text" or "csv". If "text" is entered the TEXT variable is set
+to true and if "csv" is entered the CSV variable is set to true. Finally, if the -s flag is
+found a variable STATE is set to the string after the -s flag, STATE is then edited if
+there is a space in the name, and finally the STATESET variable is set to true.
+
+2. In order to extract the zipcodes I used the command: curl -s
+http://www.zipcodestogo.com/"$STATE"/ | grep -Eo '[0-9]{5}/' | cut -c 1-5. This command first
+uses curl to get the source code from the webpage containing the information for the desired
+state. Next, grep is used to display only the five digit numbers followed by a back slash.
+Finally, the cut command is used with the character flag to get rid of the back slash and just
+display the five digit zip codes.
+
+3. In order to filter by state and city I used two variables STATE and CITY. I set these
+variables in the while loop that dealt with the command line arguments and then called them
+later on when finding the zip codes. I used the STATE variable in the curl command to specify
+which webpage to gather the source code from. I then used the CITY variable when the city flag
+was passed in order to grep the name of the city in the source code and then extract the zip code
+from that same line of code.
+
+4. In order to handle the -f flag I used the TEXT and CSV variables and set them to true if
+the -f flag was called depending on which option was indicated. I then used if statements that executed
+if the TEXT variable or CSV variable were set to true. The if statement that executed when the TEXT option
+was indicated simply used grep to display the zip codes one line at a time. The if statement that executed
+when the CSV option was indicated used the same grep command to find the zip codes and then uses the tr
+command to replace the new line character with a comma.
