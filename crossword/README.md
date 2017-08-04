@@ -7,4 +7,4 @@ This was one of the most challenging assigments I had during my Fundamentals of 
 1. Clone the repository: `git clone https://github.com/slancas1/smaller_assignments.git`
 2. Run the Makefile: `make`
 3. Run the executable: `./playcrossword`
-4. Follow the instructions given by the program 
+4. Follow the instructions provided by the program 
