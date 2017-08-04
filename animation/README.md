@@ -6,7 +6,7 @@ In order to start learning about graphics libraries we were given the task to cr
 
 **The game works best when played locally but you will need to have XQuartz installed.**
 
-1. Clone the repository
+1. Clone the repository: `git clone https://github.com/slancas1/smaller_assignments.git`
 2. Compile animate.cpp using the following command: `g++ -std=c++11 -lX11 animate.cpp -o animate` --> FIX THIS IT ISN'T RIGHT
 3. Run the executable: `./animate`
 4. A window will open and the user can control the animation using the following commands:
