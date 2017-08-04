@@ -1,0 +1,18 @@
+Sophie Lancaster
+December 2, 2016
+Lab Report for Lab #10
+
+For this lab I made a program that simulated a beach ball rolling and bouncing on the beach.
+
+From a user’s perspective when this program is run, an Xterm window opens with the beach ball simulation and a menu is displayed in the terminal window telling the user what the different commands are. The menu says:
+•	w: speed up the ball
+•	s: slow down the ball
+•	a: move the ball to the left
+•	d: move the ball to the right
+•	mouse left click: make the ball bounce
+•	q: quit
+The user can then use these commands to maneuver the ball in the ways described above.
+
+From a programmer’s perspective I had a lot of fun with this program. I first created a function that I called beach ball, which creates the background, sand, beach ball, and clouds. This function is where all of the gfx commands are called that create the lines, circles, change the color, etc. I had to use a lot of for loops in this function in order to fill in the different shapes. I also incorporated some trigonometry when creating the lines because as part of the simulation I wanted the lines on the ball to move in circular motion. I did this by adding a dx term to the angle when finding the points used to create the lines. After working on this function I started working on the main part of the program. I first declared and initialized all the necessary variables for the program. After this I used the gfx_open command to open a window. The menu was then displayed to the user before an overarching while loop was entered. This while loop contains the majority of the code and is only exited when q is pressed. The beachball function is then called to create the beach ball and background. After this three variables controlling the motion of the ball are iterated so that the ball moves. Next, I added a bunch of if statements that took care of things like making sure the lines stop moving when the velocity of the ball is zero and making sure the ball stays in the window. The next if statement executes if the bouncing flag has been turned to true and it creates the bouncing motion by changing the y coordinate of the beach ball and its y component of velocity. I also utilized the usleep function in my program so that the animation is not extremely fast. The final part of the code is the part that runs when gfx_event_waiting returns true. This part gives a value to the variable c corresponding to the user’s action. I then include five different if statements corresponding to each of the different commands the user can choose. As mentioned before, if the user clicks the ‘d’ button the ball travels to the right, if they click the ‘a’ button the ball travels to the left, if they click the ‘w’ button the ball speeds up, if they click the ‘s’ button the ball slows down, and if they click the left mouse button the ball bounces.
+
+In order to verify that my program worked correctly I ran the program several times testing all of the different commands many times and in different combinations. I did this and saw that it worked for whatever I tried which meant the program works.
