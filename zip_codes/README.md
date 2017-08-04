@@ -10,4 +10,15 @@ This was one of the first shell scripts I wrote and it it used to scrape the web
 
 ## Command Line Arguments
 
-* 
+The different command line aruments are passed as flags when the executable is run/
+
+1. -h: prints a usage message for the program
+	* **EXAMPLE:** `./zipcode.sh -h`
+2. -c: allows you to specify which city you want the zip code for
+	* **EXAMPLE:** `./zipcode.sh -c Warsaw`
+3. -f: allows you to specify which format the zip codes should be displayed in
+	* **EXAMPLE:** `./zipcode.sh -f csv`
+4. -s: allows you to specify which state you want the zip code for
+	* **EXAMPLE:** `./zipcode.sh -s Indiana`
+
+
