@@ -4,6 +4,8 @@ For this assigment we were supposed to write a program that simulates the game o
 
 ## Rules of Black Jack
 
+*Disclaimer:* The rules listed below are specific to the version of black jack that I implemented
+
 **GOAL:** Come as close to 21 as possible without going over
 * If you exceed 21 you lose
 * If the final value is less than 21 then the dealer takes cards up until 17 or higher
