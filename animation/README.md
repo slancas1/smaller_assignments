@@ -1,4 +1,4 @@
-## Beach Ball Animation
+# Beach Ball Animation
 
 In order to start learning about graphics libraries we were given the task to create a simple animation that could be interacted with using keyboard and mouse input. The graphics library used in this assignment was provided by the professor of my Fundamentals of Computing class, Ramzi Bualuan. For more details about the program refer to the *report.txt* file. 
 
