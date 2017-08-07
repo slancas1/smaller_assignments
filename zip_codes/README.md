@@ -1,6 +1,6 @@
-## Zip Code Finder
+# Zip Code Finder
 
-This was one of the first shell scripts I wrote and it it used to scrape the web to find certain zip codes. The program takes command line arguments so that the user can specify which zipcode(s) they want to find. I loved this assignment because it was my first experience with web scraping and I thought it was nice that when I finished the assignment I actually had a very useful tool. For more details about the program refer to the *report.txt* file. 
+This was one of the first shell scripts I wrote and it is used to scrape the web to find certain zip codes. The program takes command line arguments so that the user can specify which zipcode(s) they want to find. I loved this assignment because it was my first experience with web scraping and I liked that I had a useful tool when I finished the assignment. For more details about the program refer to the *report.txt* file. 
 
 ## Use
 
